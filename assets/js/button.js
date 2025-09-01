@@ -22,7 +22,7 @@ themeToggle.addEventListener("click", () => {
 });
 
 // hamburger toggle
-const nav = document.querySelector("#nav ul");
+const nav = document.querySelector("#nav");
 const hamburger = document.getElementById("hamburger");
 
 hamburger.addEventListener("click", () => {

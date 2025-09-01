@@ -4,8 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>JiCourse</title>
+		<meta
+			name="description"
+			content="JiCourse adalah platform pembelajaran digital berbasis web yang dirancang untuk memudahkan siapa saja mengakses ilmu secara praktis, fleksibel, dan interaktif. Dengan JiCourse, belajar jadi lebih seru dan terarah di mana pun dan kapan pun."
+		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/fonts/jetBrainsMono/stylesheet.css">
+		<link rel="stylesheet" href="./assets/fonts/jetBrainsMono/stylesheet.css" />
 		<link rel="stylesheet" href="./assets/fonts/fontAwesome/css/all.min.css" />
 	</head>
 	<body>
@@ -22,26 +26,26 @@
 					<!-- links -->
 					<nav id="nav">
 						<ul>
-							<li title="Home">
-								<a href="#" class="nav-link">Home</a>
+							<li title="Beranda">
+								<a href="#" class="nav-link active">Beranda</a>
 							</li>
-							<li title="About Us">
-								<a href="./pages/about.html" class="nav-link">About Us</a>
+							<li title="Tentang Kami">
+								<a href="./pages/about.html" class="nav-link">Tentang Kami</a>
 							</li>
-							<li title="Courses">
-								<a href="./pages/courses.html" class="nav-link">Courses</a>
+							<li title="Kursus">
+								<a href="./pages/courses.html" class="nav-link">Kursus</a>
 							</li>
 						</ul>
 					</nav>
 
-					<div class="button-wrap">
+					<div class="button-wrap" title="Tema">
 						<button id="theme-toggle">
 							<i class="fa-solid fa-moon"></i>
 							<i class="fa-solid fa-sun"></i>
 						</button>
 
 						<!-- hamburger menu -->
-						<button id="hamburger">
+						<button id="hamburger" title="Menu">
 							<span class="hamburger-line"></span>
 							<span class="hamburger-line"></span>
 							<span class="hamburger-line"></span>
@@ -49,9 +53,32 @@
 					</div>
 				</div>
 			</header>
+
+			<!-- hero -->
+			<section id="hero" class="min-h-screen container">
+				<div class="wrapper">
+					<h1 id="headline" class="text-center">
+						Platform <mark id="markheadline"></mark> untuk Semua.
+					</h1>
+					<p class="desc text-center">
+						📚🚀✨ Dari pelajar hingga profesional — JiCourse memudahkan siapa saja
+						untuk belajar dengan cara yang lebih modern dan interaktif.
+					</p>
+					<a href="./pages/register.html" class="btn btn-primary">👉 Coba Gratis</a>
+				</div>
+			</section>
 		</main>
 
 		<script src="./assets/js/button.js"></script>
+		<!-- https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js -->
+		<script src="./assets/js/typedjs/typed.umd.js"></script>
+		<script>
+			var typed = new Typed("#markheadline", {
+				strings: ["Pembelajaran Digital"],
+				typeSpeed: 60,
+        cursorChar: "_",
+			});
+		</script>
 		<script src="./assets/fonts/fontAwesome/js/all.min.js"></script>
 	</body>
 </html>
