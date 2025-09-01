@@ -1,0 +1,220 @@
+/* import responsive */
+@import url("./responsive.css");
+
+/* variable */
+:root {
+  --border: rgba(165, 165, 165, 0.2);
+  --box-shadow: .1rem .2rem var(--border);
+  --primary: #1e0383;
+  --primary-foreground: #f6f7ff;
+  --secondary: #fadc32;
+  --radius: 1rem;
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+/* dark mode */
+.dark {
+  --primary-foreground: #1e0383;
+  --primary: #f6f7ff;
+  --foreground: #ffffff;
+  --background: #1b1a1a;
+}
+
+/* global */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  list-style: none;
+  font-family: "JetBrains Mono", monospace;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: var(--primary);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* darkmode toggle */
+#theme-toggle {
+  width: 2rem;
+  height: 2rem;
+  padding: .5rem;
+  border-radius: var(--radius);
+  background-color: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#theme-toggle:hover {
+  background-color: rgba(165, 165, 255, 0.05);
+}
+
+.dark #theme-toggle .fa-moon,
+#theme-toggle .fa-sun {
+  visibility: hidden !important;
+}
+
+#theme-toggle .fa-moon,
+.dark #theme-toggle .fa-sun {
+  visibility: visible !important;
+}
+
+#theme-toggle .fa-sun,
+#theme-toggle .fa-moon {
+  width: 100% !important;
+  position: absolute;
+  transition: all .2s ease-in-out;
+}
+
+
+/* header */
+#header {
+  /* background-color: red; */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 1rem;
+}
+
+#header-container {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--radius);
+  backdrop-filter: blur(.5rem);
+  border: .1rem solid var(--border);
+  padding: .3rem 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+#logo {
+  width: 2.7rem;
+  height: 2.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo .logo-item {
+  color: var(--primary);
+  font-weight: bolder;
+  font-size: 2rem;
+  text-indent: -.46rem;
+}
+
+#logo .logo-item:nth-child(2) {
+  color: var(--secondary);
+  z-index: 2;
+  border: solid var(--primary-foreground);
+  line-height: 1.5rem;
+}
+
+#nav ul {
+  position: absolute;
+  top: 100%;
+  margin-top: .5rem;
+  background-color: transparent;
+  width: 100%;
+  border-radius: var(--radius);
+  backdrop-filter: blur(.5rem);
+  border: .1rem solid var(--border);
+  padding: .5rem 1rem;
+  right: 0;
+  box-shadow: var(--box-shadow);
+  transform: scaleY(0);
+  transition: transform .2s ease-in-out;
+  transform-origin: top;
+}
+
+#nav ul.show {
+  transform: scaleY(1);
+}
+
+.nav-link {
+  display: block;
+  margin: .5rem 0;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  border-radius: .5rem;
+  border-bottom: solid transparent;
+  transition: color, background, border .2s ease-in-out;
+}
+
+.nav-link:hover {
+  border-bottom: solid var(--border);
+  background-color: rgba(255, 165, 165, 0.05);
+  color: var(--secondary);
+}
+
+.button-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* hamburger menu */
+#hamburger {
+  width: 2rem;
+  position: relative;
+  overflow: hidden;
+  height: 2rem;
+  border-radius: .4rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+  border: 1px solid var(--border);
+}
+
+#hamburger:hover {
+  background-color: rgba(165, 165, 255, 0.05);
+}
+
+.hamburger-line {
+  background-color: var(--primary);
+  width: 70%;
+  height: .2rem;
+  display: block;
+  border-radius: 999px;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  transition: all .2s ease-in-out;
+}
+
+.hamburger-line:nth-child(1) {
+  top: .55rem;
+}
+
+.hamburger-line:nth-child(3) {
+  top: 1.15rem;
+}
+
+#hamburger.active .hamburger-line:nth-child(1) {
+  rotate: 45deg;
+  top: 50%;
+}
+
+#hamburger.active .hamburger-line:nth-child(2) {
+  scale: 0;
+}
+
+#hamburger.active .hamburger-line:nth-child(3) {
+  top: 50%;
+  rotate: -45deg;
+}
