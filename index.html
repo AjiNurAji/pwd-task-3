@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +9,7 @@
 			content="JiCourse adalah platform pembelajaran digital berbasis web yang dirancang untuk memudahkan siapa saja mengakses ilmu secara praktis, fleksibel, dan interaktif. Dengan JiCourse, belajar jadi lebih seru dan terarah di mana pun dan kapan pun."
 		/>
 		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="stylesheet" href="./assets/css/responsive.css" />
 		<link rel="stylesheet" href="./assets/fonts/jetBrainsMono/stylesheet.css" />
 		<link rel="stylesheet" href="./assets/fonts/fontAwesome/css/all.min.css" />
 	</head>
@@ -31,9 +32,6 @@
 							</li>
 							<li title="Tentang Kami">
 								<a href="./pages/about.html" class="nav-link">Tentang Kami</a>
-							</li>
-							<li title="Kursus">
-								<a href="./pages/courses.html" class="nav-link">Kursus</a>
 							</li>
 						</ul>
 					</nav>
@@ -64,9 +62,229 @@
 						📚🚀✨ Dari pelajar hingga profesional — JiCourse memudahkan siapa saja
 						untuk belajar dengan cara yang lebih modern dan interaktif.
 					</p>
-					<a href="./pages/register.html" class="btn btn-primary">👉 Coba Gratis</a>
+					<a href="#form-register" class="btn btn-primary">👉 Coba Gratis</a>
 				</div>
 			</section>
+
+			<!-- quote -->
+			<section id="quote" class="container">
+				<blockquote>
+					<q>
+						Kita membutuhkan teknologi disetiap kelas dan di tangan setiap murid dan
+						dosen, karena teknologi adalah pena dan kertas zaman kita, dan merupakan
+						lensa yang kita gunakan untuk mengalami sebagian besar dunia kita
+					</q>
+					<hr />
+					<span>David Warlick</span>
+				</blockquote>
+			</section>
+
+			<!-- latest course -->
+			<section class="section-wrapper">
+				<h2>Kursus Terbaru</h2>
+
+				<div class="course-wrapper">
+					<a href="./pages/courses/html/index.html" class="card-course">
+						<div class="course-img">
+							<img src="./assets/img/courses/html.webp" alt="poster html" />
+						</div>
+						<div class="course-desc">
+							<h3><abbr title="HyperMarkup Text Language">HTML</abbr> - Pemula</h3>
+							<p class="desc">
+								🚀Mulai langkah pertama membangun website dengan mempelajari struktur
+								dasar HTML.
+							</p>
+						</div>
+					</a>
+					<a href="#" class="card-course">
+						<div class="course-img">
+							<img src="./assets/img/courses/css.webp" alt="Cascading Stylesheet" />
+						</div>
+						<div class="course-desc">
+							<h3><abbr title="Cascading Style Sheet">CSS</abbr> - Pemula</h3>
+							<p class="desc">
+								🎨Kuasai CSS untuk membuat tampilan website jadi lebih indah, modern,
+								dan responsif.
+							</p>
+						</div>
+					</a>
+					<a href="#" class="card-course">
+						<div class="course-img">
+							<img src="./assets/img/courses/js.webp" alt="JavaScript" />
+						</div>
+						<div class="course-desc">
+							<h3>JavaScript - Pemula</h3>
+							<p class="desc">
+								⚡Buat websitemu jadi interaktif! Belajar JavaScript dari dasar hingga
+								bisa membuat fitur dinamis.
+							</p>
+						</div>
+					</a>
+					<div class="card-course">
+						<div class="course-commming-soon">
+							<img src="./assets/img/courses/coming-son.webp" alt="Commming Soon" />
+							<p class="desc">Sedang disiapkan!</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- tabel kursus -->
+			<section id="table-course" class="section-wrapper container bg-odd">
+				<h2>Daftar Kursus</h2>
+				<table border="1" cellspacing="0" cellpadding="8">
+					<caption>
+						📚 Kursus yang tersedia di JiCourse
+					</caption>
+					<thead>
+						<tr>
+							<th>Judul</th>
+							<th>Level</th>
+							<th>Durasi</th>
+							<th>Rilis</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>HTML Dasar</td>
+							<td>Pemula</td>
+							<td>5 Jam</td>
+							<td><time datetime="2025-01-20">20 Jan 2025</time></td>
+						</tr>
+						<tr>
+							<td>CSS Dasar</td>
+							<td>Pemula</td>
+							<td>6 Jam</td>
+							<td><time datetime="2025-02-01">1 Feb 2025</time></td>
+						</tr>
+						<tr>
+							<td>JavaScript Dasar</td>
+							<td>Pemula</td>
+							<td>8 Jam</td>
+							<td><time datetime="2025-02-15">15 Feb 2025</time></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="4">Lebih banyak kursus segera hadir...</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+			<!-- form pendaftaran -->
+			<section id="form-register" class="section-wrapper container">
+				<h2>Form Pendaftaran</h2>
+				<form action="#" method="post" class="box" enctype="multipart/form-data">
+					<label for="name">Nama Lengkap:</label><br />
+					<input type="text" id="name" name="name" required /><br />
+
+					<label for="email">Email:</label><br />
+					<input type="email" id="email" name="email" required /><br />
+
+					<span>Jenis Kelamin:</span><br />
+					<input type="radio" id="male" name="gender" value="Laki-laki" />
+					<label for="male">Laki-laki</label>
+					<input type="radio" id="female" name="gender" value="Perempuan" />
+					<label for="female">Perempuan</label><br />
+
+					<span>Kursus yang diminati:</span><br />
+					<input type="checkbox" id="html" name="course" value="HTML" />
+					<label for="html">HTML</label>
+					<input type="checkbox" id="css" name="course" value="CSS" />
+					<label for="css">CSS</label>
+					<input type="checkbox" id="js" name="course" value="JavaScript" />
+					<label for="js">JavaScript</label><br />
+
+					<label for="level" id="level">Pilih Level:</label><br />
+					<div class="custom-select">
+						<div class="selected">Pemula</div>
+						<ul class="options">
+							<li data-value="pemula">Pemula</li>
+							<li data-value="menengah">Menengah</li>
+							<li data-value="lanjutan">Lanjutan</li>
+						</ul>
+					</div>
+					<br />
+
+					<label for="bio">Ceritakan tujuan belajar Anda:</label><br />
+					<textarea id="bio" name="bio" rows="4" cols="40"></textarea><br />
+
+					<label for="upload">Upload Foto Profil:</label><br />
+					<input type="file" id="upload" name="upload" /><br />
+
+					<button type="submit" class="btn btn-primary">Daftar</button>
+					<button type="reset" class="btn btn-destructive">Reset</button>
+				</form>
+			</section>
+
+			<!-- video -->
+			<section id="video" class="section-wrapper container">
+				<h2>Video Perkenalan JiCourse</h2>
+				<figure>
+					<video
+						controls
+						controlsList="nodownload"
+						title="Vido Perkenalan JiCourse dibuat oleh Gemini AI"
+						poster="./assets/video/thumbnail/Gemini_Generated_Image_mipdmimipdmimipd.png"
+					>
+						<source src="./assets/video/JiCourse_Promo_Video_Generation.mp4" />
+					</video>
+					<figcaption>🎥 Belajar lebih mudah dengan JiCourse</figcaption>
+				</figure>
+			</section>
+
+			<!-- audio -->
+			<section id="audio" class="section-wrapper container">
+				<h2>Audio Motivasi</h2>
+				<figure>
+					<audio controls controlsList="nodownload">
+						<source src="./assets/audio/audio.mp3" type="audio/mpeg" />
+						Browser Anda tidak mendukung audio.
+					</audio>
+					<figcaption>
+						🎵 Dengarkan audio motivasi untuk semangat belajar.
+					</figcaption>
+				</figure>
+			</section>
+
+			<footer id="footer">
+				<div class="footer-container">
+					<!-- Logo -->
+					<div class="footer-logo">
+						<div id="logo">
+							<span class="logo-item">J</span><span class="logo-item">C</span>
+						</div>
+						<h3>JiCourse</h3>
+						<p>Belajar kapan saja, di mana saja.</p>
+					</div>
+
+					<!-- Quick Links -->
+					<div class="footer-links">
+						<h4>Menu</h4>
+						<ul>
+							<li><a href="#">Beranda</a></li>
+							<li><a href="./pages/about.html">Tentang Kami</a></li>
+						</ul>
+					</div>
+
+					<!-- Contact -->
+					<div class="footer-contact">
+						<h4>Kontak</h4>
+						<p>Email: support@jicourse.com</p>
+						<p>Tel: +62 812 3456 7890</p>
+						<div class="socials">
+							<a href="#"><i class="fa-brands fa-facebook"></i></a>
+							<a href="#"><i class="fa-brands fa-twitter"></i></a>
+							<a href="https://instagram.com/ajnrji_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Copyright -->
+				<div class="footer-bottom">
+					<p>&copy; 2025 JiCourse. All rights reserved.</p>
+				</div>
+			</footer>
 		</main>
 
 		<script src="./assets/js/button.js"></script>
@@ -76,7 +294,7 @@
 			var typed = new Typed("#markheadline", {
 				strings: ["Pembelajaran Digital"],
 				typeSpeed: 60,
-        cursorChar: "_",
+				cursorChar: "_",
 			});
 		</script>
 		<script src="./assets/fonts/fontAwesome/js/all.min.js"></script>

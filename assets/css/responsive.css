@@ -1,21 +1,62 @@
 /* tab or ipad */
-@media screen and (min-width: 768px) {
-  #hamburger {
-    display: none;
+@media screen and (min-width: 768px) {  
+  :root {
+    --font-size: 1.2rem;
   }
 
-  #nav ul {
-    display: flex;
-    position: relative !important;
-    transform: scaleY(1) !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-    border: none !important;
-    gap: .5rem;
+	#hamburger {
+		display: none;
+	}
+
+  #logo .logo-item {
+    font-size: 2.5rem;
   }
+
+	#nav ul {
+		display: flex;
+		position: relative;
+		transform: scaleY(1);
+		padding: 0;
+		box-shadow: none;
+		border: none;
+		gap: 0.5rem;
+	}
+
+	.course-wrapper {
+		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	}
+
+  .card-course h3 {
+    font-size: 1.65rem;
+  }
+
+	.section-wrapper h2 {
+    font-size: 1.8rem;
+	}
+
+  .card-course .desc {
+    font-size: 1rem;
+  }
+
+  #hamburger,#theme-toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+	#headline,
+  .typed-cursor,
+	#headline mark {
+		font-size: 4rem;
+	}
 }
 
 /* desktop */
 @media screen and (min-width: 990px) {
-  
+	.section-wrapper h2 {
+		font-size: 1.95rem;
+	}
+
+  figure iframe, figure video {
+    height: 30rem;
+  }
 }
