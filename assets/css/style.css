@@ -218,7 +218,16 @@ figure iframe, figure video {
   border-radius: var(--radius);
   overflow: hidden;
   width: 100%;
-  height: 15rem;
+  height: auto;
+}
+
+.bg-primary {
+  background-color: var(--primary-foreground);
+  color: var(--primary);
+}
+
+.dark .bg-primary {
+  background-color: rgba(165, 165, 165, 0.05);
 }
 
 /* Custom select */
@@ -572,15 +581,11 @@ figure iframe, figure video {
 
 .footer-bottom {
   text-align: center;
-  border-top: 1px solid #333;
+  border-top: 1px solid rgba(165, 165, 165, 0.05);
   padding-top: 1rem;
   font-size: 0.85rem;
-  color: #aaa;
 }
 
-/* Responsive */
-@media (min-width: 768px) {
-  .footer-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.dark .footer-bottom {
+  border-top: 1px solid #333;
 }

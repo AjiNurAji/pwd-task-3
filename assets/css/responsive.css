@@ -48,6 +48,14 @@
 	#headline mark {
 		font-size: 4rem;
 	}
+
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #material .heading {
+    flex-direction: row;
+  }
 }
 
 /* desktop */
@@ -55,8 +63,4 @@
 	.section-wrapper h2 {
 		font-size: 1.95rem;
 	}
-
-  figure iframe, figure video {
-    height: 30rem;
-  }
 }
