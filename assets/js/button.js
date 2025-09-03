@@ -1,3 +1,5 @@
+console.info("Web ini dibuat untuk menyelesaikan tugas mata kuliah Pemrograman Web Dasar \n - Created by Aji Nur Aji")
+
 // theme default
 document.addEventListener("DOMContentLoaded", () => {
 	const storedTheme = localStorage.getItem("theme");
